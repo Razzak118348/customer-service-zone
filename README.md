@@ -1,6 +1,5 @@
-## JSX (JavaScript XML) is a syntax extension for JavaScript that allows writing HTML-like code directly in JavaScript.  
-It makes it easier to create and visualize React components.
-
+## 1. JSX (JavaScript XML) is a syntax extension for JavaScript that allows writing HTML-like code directly in JavaScript.  
+# It makes it easier to create and visualize React components.
 ## Why use JSX:
 - Makes code more readable and declarative.
 - Defines the structure of UI clearly.
