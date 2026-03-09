@@ -5,6 +5,7 @@ A complete guide covering fundamental React concepts including JSX, State vs Pro
 ---
 
 ## Table of Contents
+
 - [1. JSX](#1-jsx)
 - [2. State vs Props](#2-state-vs-props)
 - [3. useState Hook](#3-usestate-hook)
@@ -22,11 +23,13 @@ A complete guide covering fundamental React concepts including JSX, State vs Pro
 It makes it easier to create and visualize React components.
 
 **Why use JSX:**
+
 - Makes code more readable and declarative.
 - Defines the structure of UI clearly.
 - Compiles to `React.createElement()` calls for rendering.
 
 **Example:**
+
 ```jsx
 const element = <h1>Hello, React!</h1>;
 </details>
@@ -123,3 +126,4 @@ Passing arguments to handlers:
 
 <button onClick={() => handleClick("Hello")}>Click Me</button>
 </details>
+```
