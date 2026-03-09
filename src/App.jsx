@@ -8,6 +8,7 @@ import TicketCard from './Component/TicketCard/TicketCard';
 import TaskStatus from './Component/TaskStatus/TaskStatus';
 import { toast } from 'react-toastify';
 import ResolvedTask from './Component/ResolvedTask/ResolvedTask';
+import Footer from './Component/Footer/Footer';
 function App() {
  const tickets = ticketsData;
   const [tasks, setTasks] = useState([]);
@@ -69,6 +70,8 @@ const handleComplete = (id) => {
       </div>
 
     </div>
+
+    <Footer />
     </div>
   );
 }
