@@ -86,7 +86,7 @@
     "description": "Search bar returns no results.",
     "customer": "James Moore",
     "priority": "Low",
-    "status": "Resolved",
+    "status": "Open",
     "createdAt": "2024-02-19"
   },
   {
@@ -95,7 +95,7 @@
     "description": "Alignment issues in dashboard layout.",
     "customer": "Sophia Jackson",
     "priority": "Low",
-    "status": "Resolved",
+    "status": "Open",
     "createdAt": "2024-02-20"
   },
   {
@@ -122,7 +122,7 @@
     "description": "Layout breaks on mobile devices.",
     "customer": "Benjamin Clark",
     "priority": "Medium",
-    "status": "Resolved",
+    "status": "Open",
     "createdAt": "2024-02-23"
   },
   {

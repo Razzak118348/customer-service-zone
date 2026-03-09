@@ -39,16 +39,16 @@ const handleComplete = (id) => {
   return (
     <div>
       <Navbar />
-      <div className='max-w-7xl mx-auto pt-10'>
+      <div className='max-w-7xl p-8  mx-auto md:pt-10'>
 
       <Banner
         inProgress={tasks.length}
         resolved={resolved.length}
       />
 
-      <div className="grid grid-cols-3 gap-6 py-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2  gap-6 py-10">
 
-        <div className="col-span-2 grid grid-cols-2 gap-4">
+        <div className="col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
           {tickets.map(ticket => (
             <TicketCard
               key={ticket.id}
