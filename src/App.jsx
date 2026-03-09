@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 import ResolvedTask from './Component/ResolvedTask/ResolvedTask';
 import Footer from './Component/Footer/Footer';
 function App() {
- const tickets = ticketsData;
+const [tickets, setTickets] = useState(ticketsData);
   const [tasks, setTasks] = useState([]);
   const [resolved, setResolved] = useState([]);
 
@@ -35,6 +35,10 @@ const handleComplete = (id) => {
   setTasks(tasks.filter(task => task.id !== id));
 
   setResolved([...resolved, completedTask]);
+
+  setTickets(tickets.filter(ticket => ticket.id !== id));
+
+  toast.success("Ticket resolved successfully");
 };
 
   return (
