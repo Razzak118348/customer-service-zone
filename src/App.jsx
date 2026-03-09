@@ -6,23 +6,35 @@ import Navbar from './Component/Navbar/Navbar'
 import ticketsData from "../public/tickets.json"
 import TicketCard from './Component/TicketCard/TicketCard';
 import TaskStatus from './Component/TaskStatus/TaskStatus';
+import { toast } from 'react-toastify';
+import ResolvedTask from './Component/ResolvedTask/ResolvedTask';
 function App() {
- const [tickets, setTickets] = useState(ticketsData);
+ const tickets = ticketsData;
   const [tasks, setTasks] = useState([]);
   const [resolved, setResolved] = useState([]);
 
-  const handleSelect = (ticket) => {
-    setTasks([...tasks, ticket]);
-  };
+const handleSelect = (ticket) => {
 
-  const handleComplete = (id) => {
+  const exists = tasks.find(t => t.id === ticket.id);
 
-    const completed = tasks.find(t => t.id === id);
+  if(exists){
+    toast.warning("Ticket already in progress ⚠️");
+    return;
+  }
 
-    setTasks(tasks.filter(t => t.id !== id));
-    setResolved([...resolved, completed]);
-    setTickets(tickets.filter(t => t.id !== id));
-  };
+  toast.success("Ticket added to task status");
+
+  setTasks([...tasks, ticket]);
+};
+
+const handleComplete = (id) => {
+
+  const completedTask = tasks.find(task => task.id === id);
+
+  setTasks(tasks.filter(task => task.id !== id));
+
+  setResolved([...resolved, completedTask]);
+};
 
   return (
     <div>
@@ -46,10 +58,13 @@ function App() {
           ))}
         </div>
 
-        <TaskStatus
+       <div>
+         <TaskStatus
           tasks={tasks}
           handleComplete={handleComplete}
         />
+        <ResolvedTask resolved={resolved} />
+       </div>
 
       </div>
 

@@ -4,13 +4,13 @@ const TaskStatus = ({ tasks, handleComplete }) => {
 
   const handleClick = (id, title) => {
 
-    toast.success(`${title} marked as completed ✅`);
+    toast.success(`${title} marked as completed`);
 
     handleComplete(id);
   };
 
   return (
-    <div className="p-4 border rounded">
+    <div className="p-4 ">
       <h2 className="text-xl font-bold mb-4">Task Status</h2>
 
       {tasks.length === 0 && (
